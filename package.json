@@ -1,0 +1,19 @@
+{
+  "name": "get-local-board-and-ward-auckland",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qisaw/get-local-board-and-ward-auckland.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/qisaw/get-local-board-and-ward-auckland/issues"
+  },
+  "homepage": "https://github.com/qisaw/get-local-board-and-ward-auckland#readme"
+}
