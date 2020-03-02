@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/qisaw/get-local-board-and-ward-auckland/issues"
   },
-  "homepage": "https://github.com/qisaw/get-local-board-and-ward-auckland#readme"
+  "homepage": "https://github.com/qisaw/get-local-board-and-ward-auckland#readme",
+  "dependencies": {
+    "cypress": "^4.1.0"
+  }
 }
