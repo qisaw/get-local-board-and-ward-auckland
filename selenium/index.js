@@ -33,6 +33,7 @@ const getWandAndBoard = async (driver, address, suburb) => {
       )
     )
     .sendKeys(Key.ENTER);
+  await delay(200);
   await driver.wait(until.elementLocated(By.className("dropdown-item")));
   await delay(200);
   await driver.findElement(By.className("dropdown-item")).click();
