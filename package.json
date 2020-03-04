@@ -19,8 +19,6 @@
   "dependencies": {
     "chromedriver": "^80.0.1",
     "csvtojson": "^2.0.10",
-    "cypress": "^4.1.0",
-    "json2csv": "^4.5.4",
     "selenium-webdriver": "^4.0.0-alpha.5"
   },
   "devDependencies": {
