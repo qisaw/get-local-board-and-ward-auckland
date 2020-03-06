@@ -60,7 +60,14 @@ const getWandAndBoard = async (driver, address, suburb) => {
   };
 };
 (async function example() {
-  let driver = await new Builder().forBrowser("chrome").build();
+  const screen = {
+    width: 1680,
+    height: 1050
+  };
+  let driver = await new Builder()
+    .forBrowser("chrome")
+    .setChromeOptions(new chrome.Options().headless().windowSize(screen))
+    .build();
   const initialDataAsString = fs.readFileSync("./output.csv", "utf8");
   const initailData = await csvToJSON().fromString(initialDataAsString);
   try {
