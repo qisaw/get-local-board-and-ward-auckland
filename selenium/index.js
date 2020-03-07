@@ -95,3 +95,8 @@ const getWandAndBoard = async (driver, address, suburb) => {
     await driver.quit();
   }
 })();
+
+process.on("unhandledRejection", (reason, promise) => {
+  console.log("Unhandled rejection at ", promise, `reason: ${err.message}`);
+  process.exit(1);
+});
