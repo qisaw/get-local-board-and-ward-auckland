@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "forever ./selenium/index.js"
+    "start": "forever start ./selenium/index.js"
   },
   "repository": {
     "type": "git",
