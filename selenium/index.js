@@ -24,7 +24,7 @@ const getWandAndBoard = async (driver, address, suburb) => {
       "ctl00_SPWebPartManager1_g_edfffc2b_c31b_465c_90ea_b46875a5d96e_ctl00_ctl00_ACAutoComplete"
     )
   );
-  const fullAddress = `${address} ${suburb}`;
+  const fullAddress = `${address} ${suburb}`.replace(/'/g, "\\'");
   driver.executeScript(`arguments[0].value='${fullAddress}';`, wb);
   await driver
     .findElement(
