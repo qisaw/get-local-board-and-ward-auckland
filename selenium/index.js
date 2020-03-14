@@ -72,15 +72,15 @@ const getWandAndBoard = async (driver, address, suburb) => {
   const initailData = await csvToJSON().fromString(initialDataAsString);
   try {
     for (let i = 0; i < data.length; i++) {
-      console.log(`entry number ${i}`);
       const address = data[i]["Street Address"];
       const suburb = data[i]["Suburb"];
-      console.log(`address ${address}, suburb ${suburb}`);
+      console.log(`entry number ${i}`);
       let existingEntry = initailData.find(({ address: add, suburb: sub }) => {
         return add === address && suburb === sub;
       });
       let result;
       if (!existingEntry) {
+        console.log(`address ${address}, suburb ${suburb}`);
         result = await getWandAndBoard(driver, address, suburb);
       } else {
         result = existingEntry;
@@ -96,7 +96,9 @@ const getWandAndBoard = async (driver, address, suburb) => {
   }
 })();
 
-process.on("unhandledRejection", (reason, promise) => {
+process.on("unhandledRejection", async (reason, promise) => {
   console.log("Unhandled rejection at ", promise, `reason: ${reason.message}`);
+  console.log("waiting 10 seconds and then exiting");
+  await delay(10000);
   process.exit(1);
 });
