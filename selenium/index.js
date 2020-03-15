@@ -71,7 +71,7 @@ const getWandAndBoard = async (driver, address, suburb) => {
   const initialDataAsString = fs.readFileSync("./output.csv", "utf8");
   const initailData = await csvToJSON().fromString(initialDataAsString);
   try {
-    for (let i = 0; i < data.length; i++) {
+    for (let i = initailData.length; i < data.length; i++) {
       const address = data[i]["Street Address"];
       const suburb = data[i]["Suburb"];
       console.log(`entry number ${i}`);
